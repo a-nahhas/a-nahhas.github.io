@@ -1,29 +1,48 @@
-# E-portfolio
+# AI MSc portfolio
 
-A lightweight, dependency-free e-portfolio prepared for GitHub Pages. The site
-currently contains placeholder content only.
+An academic e-portfolio for the MSc in Artificial Intelligence at the
+University of Essex. Its visual design uses Raycast as a reference for colour,
+typography, and interface details. The site is dependency-free and deploys
+directly to GitHub Pages.
+
+## Edit the content
+
+Nearly all editable wording lives in [`content.js`](content.js):
+
+- Update `owner` to change the name in the header and footer.
+- Update `program` to change the homepage introduction and programme details.
+- Update either item in `modules` to change a module's title, summary, topics,
+  learning journal, and visual accent.
+
+The visual styles live in `styles.css`. The page structure and reusable module
+renderer live in `index.html` and `app.js`.
+
+## Add another module
+
+1. Copy a full module object in `content.js` and give it a new, unique `slug`.
+2. Copy either folder inside `modules/` and rename the new folder to match the
+   slug.
+3. In the copied `index.html`, update `data-module` to the same slug and change
+   the fallback page title and description.
 
 ## Preview locally
 
-From the repository root, start any static file server. For example:
+Install the local preview dependency once:
 
 ```powershell
-python -m http.server 8000
+npm install
 ```
 
-Then open `http://localhost:8000`.
+Then start the site:
 
-## Add portfolio content
+```powershell
+npm run dev
+```
 
-1. Replace the bracketed copy in `index.html`.
-2. Update the page title and description in the `<head>`.
-3. Replace the placeholder links and profile image panel.
-4. Remove the `noindex` robots meta tag when the portfolio is ready to be
-   discoverable.
+Open `http://localhost:8000` and press `Ctrl+C` when you are finished.
 
 ## Publish
 
 The workflow in `.github/workflows/pages.yml` deploys the site whenever a commit
 is pushed to `main`. In the repository settings, set **Pages → Build and
-deployment → Source** to **GitHub Actions** once. Future pushes will deploy
-automatically.
+deployment → Source** to **GitHub Actions** once.
