@@ -37,12 +37,36 @@ window.PORTFOLIO_CONTENT = {
       ],
       journal: [
         {
-          label: 'Learning journal',
-          text: 'Weekly reflections and key ideas will be added here.',
+          label: 'Collaborative Discussion 1: Agent Based Systems',
+          text: 'Units 1–3 · Portfolio entry to be added.',
         },
         {
-          label: 'Practical activities',
-          text: 'Agent models, exercises, and experiments will appear here.',
+          label: 'Collaborative Discussion 2: Agent Communication Languages',
+          text: 'Units 5–7 · Portfolio entry to be added.',
+        },
+        {
+          label: 'Creating Agent Dialogues',
+          text: 'Unit 6 · Portfolio entry to be added.',
+        },
+        {
+          label: 'Team Project',
+          text: 'Due at the end of Unit 6 · Portfolio entry to be added.',
+        },
+        {
+          label: 'Creating Parse Trees',
+          text: 'Unit 8 · Portfolio entry to be added.',
+        },
+        {
+          label: 'Collaborative Discussion 3: Deep Learning',
+          text: 'Units 9–11 · Portfolio entry to be added.',
+        },
+        {
+          label: 'Deep Learning in Action',
+          text: 'Unit 10 · Portfolio entry to be added.',
+        },
+        {
+          label: 'Individual Presentation Project',
+          text: 'Portfolio entry to be added.',
         },
       ],
     },

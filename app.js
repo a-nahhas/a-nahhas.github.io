@@ -36,7 +36,7 @@
     document.getElementById("site-footer").innerHTML = `
       <footer class="site-footer shell">
         <p>© ${new Date().getFullYear()} ${data.owner} · Academic e-portfolio</p>
-        <p class="footer-status"><span class="status-dot" aria-hidden="true"></span>${data.program.status} · ${data.program.university}</p>
+        <p class="footer-status">${data.program.university}</p>
       </footer>`;
   }
 
@@ -82,31 +82,78 @@
         <div>
           <p class="section-label">${module.term} · ${data.program.university}</p>
           <h1 id="module-title">${module.title}</h1>
-          <p>${module.description}</p>
-          <div class="detail-meta"><span>${data.program.shortName}</span><span>${data.program.status}</span><span>Academic e-portfolio</span></div>
         </div>
       </section>
-      <div class="detail-grid">
-        <section class="content-panel" aria-labelledby="overview-title">
-          <p class="section-label">Module overview</p>
-          <h2 id="overview-title">What this module covers</h2>
-          <p>${module.overview}</p>
-          <ul class="topic-list">${module.topics.map((topic) => `<li>${topic}</li>`).join("")}</ul>
-        </section>
-        <aside class="panel-stack" aria-label="Module portfolio sections">
-          <section class="content-panel">
-            <p class="section-label">Portfolio</p>
-            <h2>Learning record</h2>
-            <div class="journal-list">${module.journal.map((item) => `<div class="journal-item"><span>${item.label}</span><p>${item.text}</p></div>`).join("")}</div>
-          </section>
-          <section class="content-panel">
-            <p class="section-label">Status</p>
-            <h2>In progress</h2>
-            <p>This page will be updated with notes, reflections, and assessments as the module progresses.</p>
-          </section>
+      <div class="portfolio-browser">
+        <aside class="entry-sidebar" aria-labelledby="entries-title">
+          <p class="section-label" id="entries-title">Entries</p>
+          <div class="journal-list" role="tablist" aria-label="${module.title} portfolio entries" aria-orientation="vertical">
+            ${module.journal.map((item, index) => `
+              <button
+                class="entry-tab"
+                id="entry-tab-${index}"
+                type="button"
+                role="tab"
+                aria-controls="selected-entry"
+                aria-selected="${index === 0}"
+                tabindex="${index === 0 ? "0" : "-1"}"
+                data-entry-index="${index}"
+              >
+                <span class="entry-number">${String(index + 1).padStart(2, "0")}</span>
+                <span>${item.label}</span>
+              </button>`).join("")}
+          </div>
         </aside>
+        <section class="content-panel entry-panel" id="selected-entry" role="tabpanel" aria-labelledby="entry-tab-0" tabindex="0">
+          <p class="section-label" id="entry-position"></p>
+          <h2 id="entry-title"></h2>
+          <p id="entry-text"></p>
+        </section>
       </div>
       <a class="back-link" href="../../index.html#modules">${icons.arrow} Back to all modules</a>`;
+
+    const entryTabs = Array.from(document.querySelectorAll(".entry-tab"));
+    const entryPanel = document.getElementById("selected-entry");
+    const entryPosition = document.getElementById("entry-position");
+    const entryTitle = document.getElementById("entry-title");
+    const entryText = document.getElementById("entry-text");
+
+    function selectEntry(index, moveFocus = false) {
+      const item = module.journal[index];
+      const selectedTab = entryTabs[index];
+      if (!item || !selectedTab) return;
+
+      entryTabs.forEach((tab, tabIndex) => {
+        const isSelected = tabIndex === index;
+        tab.setAttribute("aria-selected", String(isSelected));
+        tab.tabIndex = isSelected ? 0 : -1;
+      });
+
+      entryPanel.setAttribute("aria-labelledby", selectedTab.id);
+      entryPosition.textContent = `Entry ${index + 1} of ${module.journal.length}`;
+      entryTitle.textContent = item.label;
+      entryText.textContent = item.text;
+      if (moveFocus) selectedTab.focus();
+    }
+
+    entryTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => selectEntry(index));
+      tab.addEventListener("keydown", (event) => {
+        const lastIndex = entryTabs.length - 1;
+        let nextIndex;
+
+        if (event.key === "ArrowDown" || event.key === "ArrowRight") nextIndex = index === lastIndex ? 0 : index + 1;
+        if (event.key === "ArrowUp" || event.key === "ArrowLeft") nextIndex = index === 0 ? lastIndex : index - 1;
+        if (event.key === "Home") nextIndex = 0;
+        if (event.key === "End") nextIndex = lastIndex;
+        if (nextIndex === undefined) return;
+
+        event.preventDefault();
+        selectEntry(nextIndex, true);
+      });
+    });
+
+    selectEntry(0);
   }
 
   renderHeader();
