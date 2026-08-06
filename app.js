@@ -1,8 +1,7 @@
+import data from './content.js';
+
 (function () {
   "use strict";
-
-  const data = window.PORTFOLIO_CONTENT;
-  if (!data) return;
 
   const root = document.body.dataset.page === "module" ? "../../" : "";
   const ownerInitials = data.owner

@@ -7,12 +7,16 @@ directly to GitHub Pages.
 
 ## Edit the content
 
-Nearly all editable wording lives in [`content.js`](content.js):
+Each portfolio entry has its own file in the [`entries`](entries) folder. The
+folders and numbered filenames match the modules and the order shown on the
+site. Open an entry file and update its `label` or `text` values.
+
+General portfolio wording lives in [`content.js`](content.js):
 
 - Update `owner` to change the name in the header and footer.
 - Update `program` to change the homepage introduction and programme details.
 - Update either item in `modules` to change a module's title, summary, topics,
-  learning journal, and visual accent.
+  and visual accent.
 
 The visual styles live in `styles.css`. The page structure and reusable module
 renderer live in `index.html` and `app.js`.
@@ -20,9 +24,12 @@ renderer live in `index.html` and `app.js`.
 ## Add another module
 
 1. Copy a full module object in `content.js` and give it a new, unique `slug`.
-2. Copy either folder inside `modules/` and rename the new folder to match the
+2. Create a matching folder in `entries/`, add one file per portfolio entry,
+   then import those files at the top of `content.js` and list them in the
+   module's `journal` array.
+3. Copy either folder inside `modules/` and rename the new folder to match the
    slug.
-3. In the copied `index.html`, update `data-module` to the same slug and change
+4. In the copied `index.html`, update `data-module` to the same slug and change
    the fallback page title and description.
 
 ## Preview locally

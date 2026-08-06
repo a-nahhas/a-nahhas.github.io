@@ -1,12 +1,22 @@
+import agentBasedSystems from './entries/intelligent-agents/01-agent-based-systems.js';
+import agentCommunicationLanguages from './entries/intelligent-agents/02-agent-communication-languages.js';
+import creatingAgentDialogues from './entries/intelligent-agents/03-creating-agent-dialogues.js';
+import teamProject from './entries/intelligent-agents/04-team-project.js';
+import creatingParseTrees from './entries/intelligent-agents/05-creating-parse-trees.js';
+import deepLearningDiscussion from './entries/intelligent-agents/06-deep-learning-discussion.js';
+import deepLearningInAction from './entries/intelligent-agents/07-deep-learning-in-action.js';
+import individualPresentation from './entries/intelligent-agents/08-individual-presentation.js';
+import learningJournal from './entries/machine-learning/01-learning-journal.js';
+import practicalActivities from './entries/machine-learning/02-practical-activities.js';
+
 /**
- * EDIT YOUR PORTFOLIO CONTENT HERE
- * --------------------------------
- * Change any text between quotation marks. To add a module, copy one complete
- * module object, give it a unique slug, then copy one of the module folders and
- * update the data-module value in that folder's index.html.
+ * EDIT YOUR GENERAL PORTFOLIO CONTENT HERE
+ * -----------------------------------------
+ * Portfolio entries live in separate files inside the entries folder so each
+ * one can be edited without searching through this file.
  */
 
-window.PORTFOLIO_CONTENT = {
+const portfolioContent = {
   owner: 'Ali Nahhas',
   program: {
     shortName: 'MSc Artificial Intelligence',
@@ -36,38 +46,14 @@ window.PORTFOLIO_CONTENT = {
         'Ethics of autonomous systems',
       ],
       journal: [
-        {
-          label: 'Collaborative Discussion 1: Agent Based Systems',
-          text: 'Units 1–3 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Collaborative Discussion 2: Agent Communication Languages',
-          text: 'Units 5–7 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Creating Agent Dialogues',
-          text: 'Unit 6 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Team Project',
-          text: 'Due at the end of Unit 6 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Creating Parse Trees',
-          text: 'Unit 8 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Collaborative Discussion 3: Deep Learning',
-          text: 'Units 9–11 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Deep Learning in Action',
-          text: 'Unit 10 · Portfolio entry to be added.',
-        },
-        {
-          label: 'Individual Presentation Project',
-          text: 'Portfolio entry to be added.',
-        },
+        agentBasedSystems,
+        agentCommunicationLanguages,
+        creatingAgentDialogues,
+        teamProject,
+        creatingParseTrees,
+        deepLearningDiscussion,
+        deepLearningInAction,
+        individualPresentation,
       ],
     },
     {
@@ -87,16 +73,9 @@ window.PORTFOLIO_CONTENT = {
         'Model training and evaluation',
         'Responsible machine learning',
       ],
-      journal: [
-        {
-          label: 'Learning journal',
-          text: 'Weekly reflections and key ideas will be added here.',
-        },
-        {
-          label: 'Practical activities',
-          text: 'Notebooks, model experiments, and results will appear here.',
-        },
-      ],
+      journal: [learningJournal, practicalActivities],
     },
   ],
-}
+};
+
+export default portfolioContent;
