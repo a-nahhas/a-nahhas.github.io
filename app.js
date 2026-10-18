@@ -77,6 +77,16 @@ import data from './content.js';
         ${section.heading ? `<h3>${escapeHtml(section.heading)}</h3>` : ""}
         ${section.meta ? `<p class="entry-meta">${escapeHtml(section.meta)}</p>` : ""}
         ${(section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        ${(section.tables || []).map((table) => `
+          <figure class="entry-table${table.wrap ? " entry-table-wrap" : ""}">
+            <div class="entry-table-scroll">
+              <table>
+                <thead><tr>${table.headers.map((header) => `<th scope="col">${escapeHtml(header)}</th>`).join("")}</tr></thead>
+                <tbody>${table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
+              </table>
+            </div>
+            ${table.caption ? `<figcaption>${escapeHtml(table.caption)}</figcaption>` : ""}
+          </figure>`).join("")}
         ${section.code ? `<pre class="entry-code"><code>${escapeHtml(section.code)}</code></pre>` : ""}
         ${(section.figures || []).map((figure) => `
           <figure class="entry-figure">

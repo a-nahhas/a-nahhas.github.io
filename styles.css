@@ -243,6 +243,15 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.65rem); font-weight: 600; letter-spacing: -
 .entry-figure { margin: 1.25rem 0 0; }
 .entry-figure img { display: block; max-width: 100%; height: auto; border-radius: 0.7rem; box-shadow: inset 0 0 0 1px var(--line); }
 .entry-figure figcaption { margin-block-start: 0.55rem; color: var(--subtle); font-size: 0.72rem; line-height: 1.5; }
+.entry-table { margin: 1.25rem 0 0; }
+.entry-table-scroll { overflow-x: auto; border-radius: 0.7rem; box-shadow: inset 0 0 0 1px var(--line); }
+.entry-table table { width: 100%; border-collapse: collapse; font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.entry-table th, .entry-table td { padding: 0.55rem 0.8rem; text-align: start; white-space: nowrap; box-shadow: inset 0 -1px 0 var(--line); }
+.entry-table-wrap th, .entry-table-wrap td { white-space: normal; vertical-align: top; }
+.entry-table th { background: rgba(255, 255, 255, 0.04); color: var(--text); font-weight: 600; }
+.entry-table td { color: var(--muted); }
+.entry-table tbody tr:last-child td { box-shadow: none; }
+.entry-table figcaption { margin-block-start: 0.55rem; color: var(--subtle); font-size: 0.72rem; line-height: 1.5; }
 .entry-references ul { display: grid; gap: 0.6rem; margin-block-start: 0.9rem; padding: 0; list-style: none; }
 .entry-references li { padding-inline-start: 1.25rem; text-indent: -1.25rem; color: var(--muted); font-size: 0.76rem; line-height: 1.6; }
 .journal-list { display: grid; gap: 0.3rem; margin-block-start: 0.85rem; }

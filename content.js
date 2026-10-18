@@ -7,8 +7,16 @@ import deepLearningInAction from './entries/intelligent-agents/07-deep-learning-
 import individualPresentation from './entries/intelligent-agents/08-individual-presentation.js';
 import reflectiveCaseStudies from './entries/intelligent-agents/09-reflective-case-studies.js';
 import finalReflection from './entries/intelligent-agents/10-final-reflection.js';
-import learningJournal from './entries/machine-learning/01-learning-journal.js';
-import practicalActivities from './entries/machine-learning/02-practical-activities.js';
+import fourthIndustrialRevolution from './entries/machine-learning/01-fourth-industrial-revolution.js';
+import jaccardCoefficient from './entries/machine-learning/02-jaccard-coefficient.js';
+import mlTeamProject from './entries/machine-learning/03-team-project.js';
+import correlationAndRegression from './entries/machine-learning/04-correlation-and-regression.js';
+import perceptrons from './entries/machine-learning/05-perceptrons.js';
+import gradientDescent from './entries/machine-learning/05-gradient-descent.js';
+import cnnObjectRecognition from './entries/machine-learning/07-cnn-object-recognition.js';
+import mlIndividualPresentation from './entries/machine-learning/08-individual-presentation.js';
+import modelPerformanceMeasurement from './entries/machine-learning/09-model-performance-measurement.js';
+import mlFinalReflection from './entries/machine-learning/10-final-reflection.js';
 
 /**
  * EDIT YOUR GENERAL PORTFOLIO CONTENT HERE
@@ -75,7 +83,7 @@ const portfolioContent = {
         'Model training and evaluation',
         'Responsible machine learning',
       ],
-      journal: [learningJournal, practicalActivities],
+      journal: [fourthIndustrialRevolution, jaccardCoefficient, correlationAndRegression, mlTeamProject, perceptrons, gradientDescent, cnnObjectRecognition, mlIndividualPresentation, modelPerformanceMeasurement, mlFinalReflection],
     },
   ],
 };
