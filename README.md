@@ -11,6 +11,11 @@ Each portfolio entry has its own file in the [`entries`](entries) folder. The
 folders and numbered filenames match the modules and the order shown on the
 site. Open an entry file and update its `label` or `text` values.
 
+An entry can also have `sections` (each with an optional `heading`, `meta`,
+`paragraphs`, `code`, `figures` and `links`), a `references` list, and
+`children`: sub-entries with the same shape, shown indented beneath their parent
+in the sidebar (numbered 01.1, 01.2 and so on).
+
 General portfolio wording lives in [`content.js`](content.js):
 
 - Update `owner` to change the name in the header and footer.

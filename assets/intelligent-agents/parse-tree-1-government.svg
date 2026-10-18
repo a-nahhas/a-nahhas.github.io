@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 304" width="432" height="304" role="img" aria-label="Parse tree for: The government raised interest rates.">
+  <title>Parse tree for: The government raised interest rates.</title>
+  <rect width="100%" height="100%" rx="12" fill="#121212"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" text-anchor="middle">
+    <line x1="180.2" y1="38.0" x2="81.8" y2="75.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="81.8" y1="100.0" x2="41.5" y2="137.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="41.5" y1="162.0" x2="41.5" y2="261.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="81.8" y1="100.0" x2="122.0" y2="137.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="122.0" y1="162.0" x2="122.0" y2="261.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="180.2" y1="38.0" x2="278.6" y2="75.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="278.6" y1="100.0" x2="216.0" y2="137.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="216.0" y1="162.0" x2="216.0" y2="261.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="278.6" y1="100.0" x2="341.3" y2="137.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="341.3" y1="162.0" x2="301.0" y2="199.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="301.0" y1="224.0" x2="301.0" y2="261.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="341.3" y1="162.0" x2="381.5" y2="199.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <line x1="381.5" y1="224.0" x2="381.5" y2="261.0" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <text x="41.5" y="281.0" fill="#f5f5f5" font-weight="400" font-style="italic">The</text>
+    <text x="41.5" y="157.0" fill="#b58cff" font-weight="600">Det</text>
+    <text x="122.0" y="281.0" fill="#f5f5f5" font-weight="400" font-style="italic">government</text>
+    <text x="122.0" y="157.0" fill="#b58cff" font-weight="600">N</text>
+    <text x="81.8" y="95.0" fill="#d6d6d6" font-weight="600">NP</text>
+    <text x="216.0" y="281.0" fill="#f5f5f5" font-weight="400" font-style="italic">raised</text>
+    <text x="216.0" y="157.0" fill="#b58cff" font-weight="600">V</text>
+    <text x="301.0" y="281.0" fill="#f5f5f5" font-weight="400" font-style="italic">interest</text>
+    <text x="301.0" y="219.0" fill="#b58cff" font-weight="600">N</text>
+    <text x="381.5" y="281.0" fill="#f5f5f5" font-weight="400" font-style="italic">rates</text>
+    <text x="381.5" y="219.0" fill="#b58cff" font-weight="600">N</text>
+    <text x="341.3" y="157.0" fill="#d6d6d6" font-weight="600">NP</text>
+    <text x="278.6" y="95.0" fill="#d6d6d6" font-weight="600">VP</text>
+    <text x="180.2" y="33.0" fill="#d6d6d6" font-weight="600">S</text>
+  </g>
+</svg>

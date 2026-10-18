@@ -1,11 +1,12 @@
 import agentBasedSystems from './entries/intelligent-agents/01-agent-based-systems.js';
-import agentCommunicationLanguages from './entries/intelligent-agents/02-agent-communication-languages.js';
 import creatingAgentDialogues from './entries/intelligent-agents/03-creating-agent-dialogues.js';
 import teamProject from './entries/intelligent-agents/04-team-project.js';
 import creatingParseTrees from './entries/intelligent-agents/05-creating-parse-trees.js';
 import deepLearningDiscussion from './entries/intelligent-agents/06-deep-learning-discussion.js';
 import deepLearningInAction from './entries/intelligent-agents/07-deep-learning-in-action.js';
 import individualPresentation from './entries/intelligent-agents/08-individual-presentation.js';
+import reflectiveCaseStudies from './entries/intelligent-agents/09-reflective-case-studies.js';
+import finalReflection from './entries/intelligent-agents/10-final-reflection.js';
 import learningJournal from './entries/machine-learning/01-learning-journal.js';
 import practicalActivities from './entries/machine-learning/02-practical-activities.js';
 
@@ -47,13 +48,14 @@ const portfolioContent = {
       ],
       journal: [
         agentBasedSystems,
-        agentCommunicationLanguages,
         creatingAgentDialogues,
         teamProject,
         creatingParseTrees,
         deepLearningDiscussion,
         deepLearningInAction,
         individualPresentation,
+        reflectiveCaseStudies,
+        finalReflection,
       ],
     },
     {
